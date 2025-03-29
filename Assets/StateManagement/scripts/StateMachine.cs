@@ -32,7 +32,9 @@ namespace FractalPike.Peck.StateManagement
 			#endif
 
 			currentState?.Exit();
+			currentState?.UnsubscribeToEvents();
 			currentState = newState;
+			currentState?.SubscribeToEvents();
 			currentState?.Enter();
 		}
 	}

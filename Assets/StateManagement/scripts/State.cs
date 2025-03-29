@@ -6,11 +6,15 @@ namespace FractalPike.Peck.StateManagement
 		
 		public State(StateMachine stateMachine) => _stateMachine = stateMachine;
 
-		public abstract void Enter();
-		public abstract void Exit();
-		public abstract void CheckTransitions();
-		public abstract void Update();
-		public abstract void FixedUpdate();
-		public abstract void LateUpdate();
+		public virtual void Enter() { }
+		public virtual void SubscribeToEvents() { }
+
+		public virtual void Exit() { }
+		public virtual void UnsubscribeToEvents() { }
+
+		public virtual void CheckTransitions() { }
+		public virtual void Update() { }
+		public virtual void FixedUpdate() { }
+		public virtual void LateUpdate() { }
 	}
 }
