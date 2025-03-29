@@ -13,9 +13,9 @@ namespace FractalPike.Peck.StateManagement
 		[HideInInspector] public State currentState = null;
 
 
-		protected void Update() => currentState?.Update();
-		protected void FixedUpdate() => currentState?.FixedUpdate();
-		protected void LateUpdate()
+		protected virtual void Update() => currentState?.Update();
+		protected virtual void FixedUpdate() => currentState?.FixedUpdate();
+		protected virtual void LateUpdate()
 		{
 			currentState?.LateUpdate();
 			currentState.CheckTransitions();
