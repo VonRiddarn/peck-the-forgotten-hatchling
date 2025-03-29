@@ -18,8 +18,4 @@ All assets were created specifically for the jam.
 ### Using public fields instead of properties
 
 Due to this project being developed for WebGL nearly all decisions will be made around performance.  
-Properties adds a redundant dive in the call stack - therefore fields will be used directly.  
-To differentiate true public fields from fields that should be treated as properties, we use PascalCase for non true public fields.
-
-`Health` public field posing as a property.  
-`health` true public field.
+Properties adds a redundant dive in the call stack - therefore fields will be used directly.
