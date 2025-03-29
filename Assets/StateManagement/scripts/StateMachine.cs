@@ -6,16 +6,16 @@ namespace FractalPike.Peck.StateManagement
 	{
 		#if UNITY_EDITOR
 		[Header("Debug")]
-		[SerializeField] bool _logStateChange = false;
+		[SerializeField] protected bool _logStateChange = false;
 		#endif
 
 		/// <summary>DO NOT MODIFY!<br/>Use <c>SetState(newState)</c> instead!</summary>
 		[HideInInspector] public State currentState = null;
 
 
-		void Update() => currentState?.Update();
-		void FixedUpdate() => currentState?.FixedUpdate();
-		void LateUpdate()
+		protected void Update() => currentState?.Update();
+		protected void FixedUpdate() => currentState?.FixedUpdate();
+		protected void LateUpdate()
 		{
 			currentState?.LateUpdate();
 			currentState.CheckTransitions();
