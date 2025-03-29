@@ -13,4 +13,4 @@ You can play the game here: **TODO: Insert link when the game is done**
 **Using public fields instead of properties**
 
 Due to this project being developed for WebGL nearly all decisions will be made around performance.  
-Properties adds a redundant dive in the call stack - therefore fields will be used directly.
+Properties adds a redundant dive in the call stack - therefore fields will be used directly to minimize overhead.
