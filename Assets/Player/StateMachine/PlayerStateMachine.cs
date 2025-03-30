@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace FractalPike.Peck.Player
 {
-	public class PlayerStateMachine : StateMachine
+	public sealed class PlayerStateMachine : StateMachine
 	{
 		// TODO: Do awesome shit here!
 	}	
