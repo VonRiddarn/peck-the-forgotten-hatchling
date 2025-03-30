@@ -2,9 +2,14 @@ namespace FractalPike.Peck.StateManagement
 {
 	public abstract class State
 	{
-		protected StateMachine _stateMachine;
-		
-		public State(StateMachine stateMachine) => _stateMachine = stateMachine;
+		protected readonly StateMachine _stateMachine;
+		public readonly string name;
+
+		public State(StateMachine stateMachine, string name)
+		{
+			this.name = name;
+			_stateMachine = stateMachine;
+		}
 
 		public virtual void Enter() { }
 		public virtual void SubscribeToEvents() { }
