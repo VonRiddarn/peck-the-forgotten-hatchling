@@ -1,7 +1,10 @@
 using FractalPike.Peck.StateManagement;
 using UnityEngine;
 
-public sealed class PlayerState_Walking : State
+namespace FractalPike.Peck.Player.StateManagement.States
 {
-	public PlayerState_Walking(StateMachine stateMachine, string name) : base(stateMachine, name) {}
+	public sealed class PlayerState_Walking : State
+	{
+		public PlayerState_Walking(StateMachine stateMachine, string name) : base(stateMachine, name) {}
+	}
 }

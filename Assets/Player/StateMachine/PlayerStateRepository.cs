@@ -3,8 +3,8 @@ using UnityEngine;
 
 namespace FractalPike.Peck.Player.StateManagement
 {
-	public sealed class PlayerStateMachine : StateMachine
+	public sealed class PlayerStateRepository : MonoBehaviour
 	{
-		// TODO: Do awesome shit here!
-	}	
+		
+	}
 }
