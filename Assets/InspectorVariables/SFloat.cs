@@ -1,7 +1,10 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Float", menuName = "Fractal Pike/Variables/Float")]
-public class SFloat : ScriptableObject
+namespace FractalPike.Peck.InspectorVariables
 {
-	public float value = 0f;
+	[CreateAssetMenu(fileName = "Float", menuName = "Fractal Pike/Variables/Float")]
+	public class SFloat : ScriptableObject
+	{
+		public float value = 0f;
+	}
 }
