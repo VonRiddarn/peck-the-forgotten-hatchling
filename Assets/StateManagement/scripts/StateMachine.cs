@@ -18,7 +18,7 @@ namespace FractalPike.Peck.StateManagement
 		protected virtual void LateUpdate()
 		{
 			currentState?.LateUpdate();
-			currentState.CheckTransitions();
+			currentState?.CheckTransitions();
 		}
 
 		public void SetState(State newState)
