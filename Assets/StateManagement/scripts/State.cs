@@ -3,11 +3,12 @@ namespace FractalPike.Peck.StateManagement
 	public abstract class State
 	{
 		protected readonly StateMachine _stateMachine;
+		/// <summary>Name of the state in <c>lowercase</c></summary>
 		public readonly string name;
 
 		public State(StateMachine stateMachine, string name)
 		{
-			this.name = name;
+			this.name = name.ToLower();
 			_stateMachine = stateMachine;
 		}
 
