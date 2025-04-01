@@ -5,6 +5,6 @@ namespace FractalPike.Peck.Player.StateManagement.States
 {
 	public sealed class PlayerState_Idle : PlayerState
 	{
-		public PlayerState_Idle(StateMachine stateMachine, string name) : base(stateMachine, name) {}
+		public PlayerState_Idle(PlayerStateMachine stateMachine, string name) : base(stateMachine, name) {}
 	}
 }

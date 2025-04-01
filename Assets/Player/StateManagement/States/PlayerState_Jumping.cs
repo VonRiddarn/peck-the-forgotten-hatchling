@@ -5,6 +5,6 @@ namespace FractalPike.Peck.Player.StateManagement.States
 {
 	public sealed class PlayerState_Jumping : PlayerState
 	{
-		public PlayerState_Jumping(StateMachine stateMachine, string name) : base(stateMachine, name) {}
+		public PlayerState_Jumping(PlayerStateMachine stateMachine, string name) : base(stateMachine, name) {}
 	}
 }
