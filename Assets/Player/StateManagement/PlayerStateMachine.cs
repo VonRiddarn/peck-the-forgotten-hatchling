@@ -10,6 +10,9 @@ namespace FractalPike.Peck.Player.StateManagement
 		/// <summary>Only modify from the appropriate <c>Input manager</c>!</summary>
 		public Vector2 movementDirection = Vector2.zero;
 		
+		// Typesafe state to be of type PlayerState
+		public void SetState(PlayerState newState) => base.SetState(newState);
+
 		// NOTE: We're going for pure speed.
 		// This is using direct casts with no safety. If the state provided is not a PlayerState this WILL crash.
 		public void HandleJumpInput() => ((PlayerState)currentState).HandleJumpInput();
