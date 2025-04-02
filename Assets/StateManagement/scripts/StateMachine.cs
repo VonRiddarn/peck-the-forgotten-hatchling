@@ -9,7 +9,7 @@ namespace FractalPike.Peck.StateManagement
 		[SerializeField] protected bool _logStateChange = false;
 		#endif
 
-		/// <summary>DO NOT MODIFY!<br/>Use <c>SetState(newState)</c> instead!</summary>
+		/// <remarks>DO NOT MODIFY!<br/>Use <c>SetState(newState)</c> instead!</remarks>
 		[HideInInspector] public State currentState = null;
 
 

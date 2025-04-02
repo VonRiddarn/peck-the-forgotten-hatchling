@@ -7,7 +7,7 @@ namespace FractalPike.Peck.Player.StateManagement
 	public sealed class PlayerStateMachine : StateMachine
 	{
 		// Input is in hot path, so we use a field instead of property.
-		/// <summary>Only modify from the appropriate <c>Input manager</c>!</summary>
+		/// <remarks>Only modify from the appropriate <c>Input manager</c>!</remarks>
 		public Vector2 movementDirection = Vector2.zero;
 		
 		// Typesafe state to be of type PlayerState

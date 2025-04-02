@@ -9,7 +9,7 @@ namespace FractalPike.Peck.InputManagement
 	public sealed class InputWrapper : MonoBehaviour
 	{
 		// Input is in hot path, so we wont be using a property here.
-		/// <summary>DO NOT MODIFY!</summary>
+		/// <remarks>DO NOT MODIFY!</remarks>
 		public static InputWrapper instance = null;
 
 		// We will have a input-to-action dependency.
