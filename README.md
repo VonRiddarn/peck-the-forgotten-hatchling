@@ -15,8 +15,7 @@ Due to this project being developed for _WebGL_ nearly all decisions prioritizes
 Properties adds a redundant method call in the call stack which can create unnecessary overhead in the hot path.  
 Therefore we are using public fields instead of properties for code that is expected to cross the hot path.
 
-**Why?**  
-Direct data access means:
+**Why?**
 
 -   Reduces method call overhead
 -   Minimizes stack depth
