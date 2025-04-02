@@ -2962,6 +2962,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a01ea07a3587c8049b218f4724ca52d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerMachine: {fileID: 846331069}
   _inputDirection: {fileID: 11400000, guid: 7ad64e72f10cb0949b4ce9e040a0ffc9, type: 2}
 --- !u!4 &255496580
 Transform:
@@ -9941,6 +9942,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _logStateChange: 0
+  movementDirection: {x: 0, y: 0}
 --- !u!1 &846628446
 GameObject:
   m_ObjectHideFlags: 0

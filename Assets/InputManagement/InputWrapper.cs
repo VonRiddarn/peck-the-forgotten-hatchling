@@ -1,4 +1,5 @@
 using FractalPike.Peck.InspectorVariables;
+using FractalPike.Peck.Player.StateManagement;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -11,7 +12,11 @@ namespace FractalPike.Peck.InputManagement
 		/// <summary>DO NOT MODIFY!</summary>
 		public static InputWrapper instance = null;
 
+		// We will have a input-to-action dependency.
+		// A better way to do it would be through an observer pattern, but I can't be bothered.
+
 		[Header("Dependencies")]
+		[SerializeField] PlayerStateMachine _playerMachine = null;
 		[SerializeField] SVector2 _inputDirection = null;
 
 		PlayerInput _playerInput = null;
@@ -69,7 +74,11 @@ namespace FractalPike.Peck.InputManagement
 		// Might be overkill as we can override player behaviour at game state level.
 		void RunGameplayInput()
 		{
+			if(!_playerMachine)
+				return;
+
 			_inputDirection.value = _playerInput.actions["Move"].ReadValue<Vector2>();
+			_playerMachine.movementDirection = _inputDirection.value;
 			Debug.Log(_inputDirection.value);
 		}
 
